@@ -1,17 +1,19 @@
 {
   "name": "devlos-ui",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "private": false,
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/main.cjs",
-  "module": "./dist/main.js",
+  "main": "./dist/devlos-ui.umd.js",
+  "module": "./dist/devlos-ui.es.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/main.js",
-      "require": "./dist/main.cjs"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/devlos-ui.es.js",
+      "require": "./dist/devlos-ui.umd.js"
     },
     "./style.css": "./dist/devlos-ui.css"
   },
