@@ -7,8 +7,6 @@ import pkg from './package.json';
 
 const PROJECT_ROOT_DIR = resolve(__dirname);
 
-let currentFormat = '';
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vueDevTools()],
@@ -22,11 +20,9 @@ export default defineConfig({
     target: 'esnext',
     sourcemap: true,
     lib: {
-      entry: resolve(__dirname, 'src/main.js'),
+      entry: resolve(__dirname, 'src/main.ts'),
       name: 'devlos-ui',
-      // the proper extensions will be added
       fileName: (format, name) => {
-        currentFormat = format;
         return `${name}.${format === 'es' ? 'js' : 'cjs'}`;
       },
     },
@@ -35,18 +31,19 @@ export default defineConfig({
       // into your library
       external: [...Object.keys(pkg.dependencies ?? {})],
       output: {
+        exports: 'named',
         // // Don't rely on preserveModules
         // // It creates a lot of unwanted files because of the multiple sections of SFC files
         // manualChunks: (moduleId, meta) => {
         //   const info = meta.getModuleInfo(moduleId);
-        //   if (!info?.isIncluded) {
+        //   if (!info?.isIncluded || moduleId === 'plugin-vue:export-helper') {
         //     // Don't create empty chunks
         //     return null;
         //   }
-        //   const [namespace, file] = moduleId.split('?')[0].split('/').slice(-2);
+        //   console.log(moduleId, 'MUSTARDDDDDDDDDDDDDDDDDDDDDDDD');
+        //   const [namespace, file] = moduleId.split('?')?.[0]?.split('/')?.slice(-2);
         //   return `${namespace}/${file.slice(0, file.lastIndexOf('.'))}`;
         // },
-        // exports: 'named',
         // chunkFileNames: (chunk) => `${chunk.name}.${currentFormat === 'es' ? 'js' : 'cjs'}`,
         // assetFileNames: (chunkInfo) => {
         //   if (chunkInfo.name === 'style.css') return 'index.css';

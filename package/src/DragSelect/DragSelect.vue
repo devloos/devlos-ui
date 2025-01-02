@@ -1,8 +1,19 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
+<script lang="ts">
+const TEAL_HEX = '#008080';
+
+export interface DragSelectProps {
+  items: any[];
+  backgroundColor?: string;
+  selectorColor?: string;
+  disableSelectedStyles?: boolean;
+  enableEscapeReset?: boolean;
+}
+</script>
+
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 import { computed, ref, useTemplateRef, watch } from 'vue';
-
-const TEAL_HEX = '#008080';
 
 class DOMVector {
   constructor(
@@ -39,21 +50,12 @@ defineOptions({
   inheritAttrs: false,
 });
 
-const props = withDefaults(
-  defineProps<{
-    items: any[];
-    backgroundColor?: string;
-    selectorColor?: string;
-    disableSelectedStyles?: boolean;
-    enableEscapeReset?: boolean;
-  }>(),
-  {
-    backgroundColor: TEAL_HEX,
-    selectorColor: `${TEAL_HEX}50`,
-    disableSelectedStyles: false,
-    enableEscapeReset: false,
-  },
-);
+const props = withDefaults(defineProps<DragSelectProps>(), {
+  backgroundColor: TEAL_HEX,
+  selectorColor: `${TEAL_HEX}50`,
+  disableSelectedStyles: false,
+  enableEscapeReset: false,
+});
 
 const selectedItems = defineModel<any[]>({ required: true });
 
