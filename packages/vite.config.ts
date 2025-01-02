@@ -22,7 +22,7 @@ export default defineConfig({
     target: 'esnext',
     sourcemap: true,
     lib: {
-      entry: resolve(__dirname, 'src/main.ts'),
+      entry: resolve(__dirname, 'src/main.js'),
       name: 'devlos-ui',
       // the proper extensions will be added
       fileName: (format, name) => {
@@ -35,25 +35,23 @@ export default defineConfig({
       // into your library
       external: [...Object.keys(pkg.dependencies ?? {})],
       output: {
-        // Don't rely on preserveModules
-        // It creates a lot of unwanted files because of the multiple sections of SFC files
-        manualChunks: (moduleId, meta) => {
-          const info = meta.getModuleInfo(moduleId);
-          if (!info?.isIncluded) {
-            // Don't create empty chunks
-            return null;
-          }
-
-          const [namespace, file] = moduleId.split('?')[0].split('/').slice(-2);
-          return `${namespace}/${file.slice(0, file.lastIndexOf('.'))}`;
-        },
-
-        exports: 'named',
-        chunkFileNames: (chunk) => `${chunk.name}.${currentFormat === 'es' ? 'js' : 'cjs'}`,
-        assetFileNames: (chunkInfo) => {
-          if (chunkInfo.name === 'style.css') return 'index.css';
-          return chunkInfo.name as string;
-        },
+        // // Don't rely on preserveModules
+        // // It creates a lot of unwanted files because of the multiple sections of SFC files
+        // manualChunks: (moduleId, meta) => {
+        //   const info = meta.getModuleInfo(moduleId);
+        //   if (!info?.isIncluded) {
+        //     // Don't create empty chunks
+        //     return null;
+        //   }
+        //   const [namespace, file] = moduleId.split('?')[0].split('/').slice(-2);
+        //   return `${namespace}/${file.slice(0, file.lastIndexOf('.'))}`;
+        // },
+        // exports: 'named',
+        // chunkFileNames: (chunk) => `${chunk.name}.${currentFormat === 'es' ? 'js' : 'cjs'}`,
+        // assetFileNames: (chunkInfo) => {
+        //   if (chunkInfo.name === 'style.css') return 'index.css';
+        //   return chunkInfo.name as string;
+        // },
       },
     },
   },

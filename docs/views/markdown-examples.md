@@ -8,6 +8,12 @@ VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shi
 
 **Input**
 
+<script setup>
+import MyComponent from '@/components/MyComponent.vue';
+</script>
+
+<MyComponent />
+
 ````md
 ```js{4}
 export default {
