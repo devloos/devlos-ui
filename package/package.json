@@ -13,6 +13,12 @@
     "url": "https://github.com/devloos/devlos-ui"
   },
   "homepage": "https://www.placeholder.com",
+  "keywords": [
+    "components",
+    "ui",
+    "tailwind",
+    "devlos-ui"
+  ],
   "files": [
     "dist"
   ],
