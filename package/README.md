@@ -87,4 +87,4 @@ You can now start adding components to your project.
 
 ## Documentation
 
-Visit PLACEHOLDER to view the documentation.
+Visit https://devlos-ui.vercel.app to view the documentation.
