@@ -34,7 +34,7 @@ Simply use it as a component in any vue application.
 
 ### Create project
 
-Start by creating a new React project using `vite`:
+Start by creating a new Vue project using `vite`:
 
 ```bash
 npm create vite@latest
