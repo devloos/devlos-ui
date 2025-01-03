@@ -213,8 +213,9 @@ const selectorStyle = computed(() => {
         v-for="(item, index) in items"
         :key="index"
         :id="String(index)"
+        class="item"
         :class="{
-          'item relative after:absolute after:inset-0 after:content-[\'\']':
+          'relative after:absolute after:inset-0 after:content-[\'\']':
             selectedItems.includes(item) && !disableSelectedStyles,
         }"
         @pointerdown="addSelectedItem(index)"
