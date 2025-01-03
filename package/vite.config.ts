@@ -3,12 +3,13 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import pkg from './package.json';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 const PROJECT_ROOT_DIR = resolve(__dirname);
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), cssInjectedByJsPlugin()],
   resolve: {
     alias: {
       '@': resolve(PROJECT_ROOT_DIR, 'src'),
@@ -18,7 +19,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'devlos-ui',
-      fileName: (format) => `devlos-ui.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(pkg.dependencies ?? {})],
@@ -27,6 +28,7 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
         },
+        // assetFileNames: () => 'index.css',
       },
     },
   },

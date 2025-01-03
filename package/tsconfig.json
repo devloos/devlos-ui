@@ -1,15 +1,20 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./dist/types",
-    "emitDeclarationOnly": true,
-    "outDir": "./dist",
-    "strict": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "target": "esnext",
+    "target": "ESNext", // Target modern JavaScript
+    "module": "ESNext", // Use ES module
+    "moduleResolution": "Node", // Resolve modules like Node.js
+    "declaration": true, // Generate declaration files
+    "declarationDir": "dist/types",
+    "declarationMap": true, // Generate source maps for declarations
+    "emitDeclarationOnly": true, // Emit only declaration files
+    "outDir": "dist", // Output directory for build files
+    "jsx": "preserve", // Preserve JSX for frameworks like Vue
+    "strict": true, // Enable strict mode
+    "esModuleInterop": true, // Ensure ES module compatibility
+    "skipLibCheck": true, // Skip library type checks
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in imports
     "lib": ["esnext", "dom"]
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"], // Include all files in the `src` folder
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary folders
 }
