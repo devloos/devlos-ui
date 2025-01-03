@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Devlos UI Documentation",
   description: "Documentation for devlos-ui",
+  cleanUrls: true,
   base: "/",
   srcDir: "views",
   themeConfig: {

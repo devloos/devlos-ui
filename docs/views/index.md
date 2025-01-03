@@ -6,13 +6,6 @@ hero:
   name: "Devlos UI Documentation"
   text: "Documentation for devlos-ui"
   tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
 
 features:
   - title: Feature A
@@ -22,4 +15,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
