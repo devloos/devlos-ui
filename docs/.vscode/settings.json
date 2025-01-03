@@ -16,6 +16,5 @@
     "ngClass",
     ".*Styles",
     "*class"
-  ],
-  "vue.server.includeLanguages": ["vue", "markdown"]
+  ]
 }
