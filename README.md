@@ -2,8 +2,6 @@
 
 ### Beautifully designed components to elevate your projects effortlessly
 
----
-
 Welcome to **Devlos UI**, the ultimate solution for developers seeking clean, customizable, and high-performance UI components. Whether you're building the next big thing or refining an existing project, Devlos UI provides the tools to craft exceptional user experiences.
 
 ## Why Choose Devlos UI?
