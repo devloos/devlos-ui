@@ -49,8 +49,8 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Introduction", link: "/guide/introduction" },
+      { text: "Get Started", link: "/guide/get-started" },
       { text: "Usage", link: "/guide/usage" },
-      { text: "Get Started", link: "/guide/Installation" },
     ],
 
     logo: "devlos-ui-favicon.png",
@@ -60,8 +60,8 @@ export default defineConfig({
         text: "Guide",
         items: [
           { text: "Introduction", link: "/guide/introduction" },
+          { text: "Get Started", link: "/guide/get-started" },
           { text: "Usage", link: "/guide/usage" },
-          { text: "Get Started", link: "/guide/Installation" },
         ],
       },
       {

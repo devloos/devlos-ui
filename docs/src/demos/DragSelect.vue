@@ -23,16 +23,6 @@ const items = [
   { id: 18, name: "Item 18", value: 180 },
   { id: 19, name: "Item 19", value: 190 },
   { id: 20, name: "Item 20", value: 200 },
-  { id: 21, name: "Item 21", value: 210 },
-  { id: 22, name: "Item 22", value: 220 },
-  { id: 23, name: "Item 23", value: 230 },
-  { id: 24, name: "Item 24", value: 240 },
-  { id: 25, name: "Item 25", value: 250 },
-  { id: 26, name: "Item 26", value: 260 },
-  { id: 27, name: "Item 27", value: 270 },
-  { id: 28, name: "Item 28", value: 280 },
-  { id: 29, name: "Item 29", value: 290 },
-  { id: 30, name: "Item 30", value: 300 },
 ];
 
 const selectedItems = ref([]);
@@ -42,15 +32,13 @@ const selectedItems = ref([]);
   <DragSelect
     v-model="selectedItems"
     :items="items"
-    class="grid grid-cols-4 gap-4 border-2 border-black p-4 dark:border-white"
+    class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 xl:grid-cols-8 gap-4 border border-black p-4 dark:border-white"
   >
     <template #item="{ item }">
       <div
         class="flex flex-col items-center justify-center border border-black p-2 dark:border-white"
       >
         <div>ID: {{ item.id }}</div>
-        <div>Name: {{ item.name }}</div>
-        <div>Value: {{ item.value }}</div>
       </div>
     </template>
   </DragSelect>
