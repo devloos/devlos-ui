@@ -3,10 +3,33 @@
 const TEAL_HEX = '#008080';
 
 export interface DragSelectProps {
+  /**
+   * Items to be used by Drag Select
+   */
   items: any[];
+
+  /**
+   * Background color of a selected element
+   * @default "#008080" teal color
+   */
   backgroundColor?: string;
+
+  /**
+   * Selector color background and border
+   * @default "#00808050" teal color reduced 50%
+   */
   selectorColor?: string;
+
+  /**
+   * Disable selected item styles
+   * @default false
+   */
   disableSelectedStyles?: boolean;
+
+  /**
+   * Remove all selected items
+   * @default false
+   */
   enableEscapeReset?: boolean;
 }
 </script>
