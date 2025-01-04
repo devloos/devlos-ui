@@ -8,7 +8,7 @@ export default defineConfig({
   base: "/",
   srcDir: "src",
   head: [
-    ["link", { rel: "icon", href: "assets/devlos-ui-favicon.png" }],
+    ["link", { rel: "icon", href: "devlos-ui-favicon.png" }],
     ["meta", { name: "author", content: "Carlos Aguilera" }],
     ["meta", { property: "og:title", content: "Devlos UI" }],
     [
@@ -31,7 +31,7 @@ export default defineConfig({
       "link",
       {
         rel: "apple-touch-icon",
-        href: "/devlos-ui-favicon.png",
+        href: "devlos-ui-favicon.png",
         sizes: "180x180",
       },
     ],
@@ -53,7 +53,7 @@ export default defineConfig({
       { text: "Get Started", link: "/guide/Installation" },
     ],
 
-    logo: "assets/devlos-ui-favicon.png",
+    logo: "devlos-ui-favicon.png",
 
     sidebar: [
       {

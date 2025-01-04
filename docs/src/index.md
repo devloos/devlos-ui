@@ -6,7 +6,7 @@ hero:
   name: "Devlos UI"
   text: "Beautifully designed components to add to your projects"
   image:
-    src: assets/devlos-ui.png
+    src: devlos-ui.png
     alt: devlos-ui
   actions:
     - theme: brand
