@@ -3,9 +3,18 @@
 layout: home
 
 hero:
-  name: "Devlos UI Documentation"
-  text: "Documentation for devlos-ui"
-  tagline: My great project tagline
+  name: "Devlos UI"
+  text: "Beautifully designed components to add to your projects"
+  image:
+    src: assets/devlos-ui.png
+    alt: devlos-ui
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/introduction
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/devloos/devlos-ui
 
 features:
   - title: Feature A

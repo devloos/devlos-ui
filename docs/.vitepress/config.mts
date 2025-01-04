@@ -2,30 +2,80 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Devlos UI Documentation",
+  title: "Devlos UI",
   description: "Documentation for devlos-ui",
   cleanUrls: true,
   base: "/",
-  srcDir: "views",
+  srcDir: "src",
+  head: [
+    ["link", { rel: "icon", href: "assets/devlos-ui-favicon.png" }],
+    ["meta", { name: "author", content: "Carlos Aguilera" }],
+    ["meta", { property: "og:title", content: "Devlos UI" }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "Beautifully designed components to add to your projects",
+      },
+    ],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:creator", content: "@devlos" }],
+    [
+      "meta",
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0, viewport-fit=cover",
+      },
+    ],
+    [
+      "link",
+      {
+        rel: "apple-touch-icon",
+        href: "/devlos-ui-favicon.png",
+        sizes: "180x180",
+      },
+    ],
+  ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    editLink: {
+      pattern: "https://github.com/devloos/devlos-ui",
+      text: "Suggest changes to this page",
+    },
+
+    footer: {
+      copyright: "Copyright © 2024-Present Carlos Aguilera",
+    },
+
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Introduction", link: "/guide/introduction" },
+      { text: "Usage", link: "/guide/usage" },
+      { text: "Get Started", link: "/guide/Installation" },
     ],
+
+    logo: "assets/devlos-ui-favicon.png",
 
     sidebar: [
       {
-        text: "Examples",
+        text: "Guide",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Introduction", link: "/guide/introduction" },
+          { text: "Usage", link: "/guide/usage" },
+          { text: "Get Started", link: "/guide/Installation" },
         ],
+      },
+      {
+        text: "Components",
+        items: [{ text: "Drag Select", link: "/components/drag-select" }],
       },
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/devloos/devlos-ui" },
     ],
+
+    search: {
+      provider: "local",
+    },
   },
 });
