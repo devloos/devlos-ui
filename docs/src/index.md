@@ -16,10 +16,22 @@ hero:
       link: https://github.com/devloos/devlos-ui
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature Rich
+    details: One component for you to choose from
+    icon: 🫣
+  - title: Seamless integration
+    details: Move fast with no headaches
+    icon: 🚀
+  - title: Fully tree shakeable
+    details: Only take what you want
+    icon: ⚡
+  - title: Type Strong
+    details: Written in TypeScript, with full TS docs
+    icon: 🦾
+  - title: Flexible
+    details: Fully customizable, including any built in styling
+    icon: 🛠
+  - title: Interactive demos
+    details: Documentation of components also come with interactive demos!
+    icon: ▶️
 ---
