@@ -38,15 +38,9 @@ Welcome to **Devlos UI**, the ultimate solution for developers seeking clean, cu
 - **Maintainable codebase**: Fully typed and documented components ensure clarity and maintainability.
 - **Future-proof your projects**: Designed with scalability and flexibility in mind.
 
----
-
 ## Get Involved
 
 Devlos UI is open-source and thrives on contributions from developers like you. Found a bug or have a feature request? [Join us on GitHub](https://github.com/devloos/devlos-ui) and help make Devlos UI even better!
-
-# Getting Started
-
-Devlos UI is a collection of components based on [Tailwind CSS](https://tailwindcss.com). We assume you are already familiar with the basic ideas of [Tailwind CSS](https://tailwindcss.com) before you continue.
 
 ## Create project
 
@@ -124,3 +118,7 @@ Simply use it as a component in any vue application.
   </template>
 </DragSelect>
 ```
+
+# Getting Started
+
+Devlos UI is a collection of components based on [Tailwind CSS](https://tailwindcss.com). We assume you are already familiar with the basic ideas of [Tailwind CSS](https://tailwindcss.com) before you continue.
