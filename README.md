@@ -124,13 +124,3 @@ Simply use it as a component in any vue application.
   </template>
 </DragSelect>
 ```
-
-### Demo
-
-Drag within the container to select your items.
-
-<script setup>
-  import DragSelect from '../demos/DragSelect.vue'
-</script>
-
-<DragSelect />
