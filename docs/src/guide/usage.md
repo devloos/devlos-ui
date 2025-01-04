@@ -22,7 +22,7 @@ Simply use it as a component in any vue application.
 
 ### Demo
 
-<br />
+Drag within the container to select your items.
 
 <script setup>
   import DragSelect from '../demos/DragSelect.vue'
