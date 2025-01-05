@@ -29,17 +29,28 @@ const selectedItems = ref([]);
 </script>
 
 <template>
-  <DragSelect
-    v-model="selectedItems"
-    :items="items"
-    class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 xl:grid-cols-8 gap-4 border border-black p-4 dark:border-white"
-  >
-    <template #item="{ item }">
-      <div
-        class="flex flex-col items-center justify-center border border-black p-2 dark:border-white"
-      >
-        <div>ID: {{ item.id }}</div>
+  <div>
+    <div
+      class="flex justify-between w-100 border border-black dark:border-white p-2 translate-y-[1px]"
+    >
+      <div>Selectable Area</div>
+      <div class="flex gap-2">
+        <span>Selected Count:</span>
+        <span>{{ selectedItems.length }}</span>
       </div>
-    </template>
-  </DragSelect>
+    </div>
+    <DragSelect
+      v-model="selectedItems"
+      :items="items"
+      class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 xl:grid-cols-8 gap-4 border border-black p-4 dark:border-white"
+    >
+      <template #item="{ item }">
+        <div
+          class="flex flex-col items-center justify-center border border-black p-2 dark:border-white"
+        >
+          <div>ID: {{ item.id }}</div>
+        </div>
+      </template>
+    </DragSelect>
+  </div>
 </template>

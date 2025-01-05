@@ -9,12 +9,5 @@
     "source.fixAll": "explicit"
   },
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "tailwindCSS.classAttributes": [
-    "class",
-    "className",
-    "ngClass",
-    ".*Styles",
-    "*class"
-  ]
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
