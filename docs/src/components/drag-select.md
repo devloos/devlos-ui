@@ -84,6 +84,13 @@ export interface DragSelectSlots {
 }
 ```
 
+## Notes
+
+- Use `Meta` key to select individual or select a different area in the selectable area
+- Use [Deep](https://vuejs.org/api/sfc-css-features.html#deep-selectors) or Slotted selectors for custom classes on either the DragSelect component or any slots
+- Careful using anchor elements within the selector as it results in undefined behavior
+- Scroll drag selection coming soon
+
 ## Source
 
 [Source](https://github.com/devloos/devlos-ui/blob/main/package/src/DragSelect/DragSelect.vue) • [Demo](https://github.com/devloos/devlos-ui/blob/main/docs/src/demos/DragSelect.vue)
