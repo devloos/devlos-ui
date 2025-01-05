@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^12.2.0",
-    "devlos-ui": "^0.1.1",
+    "devlos-ui": "^0.1.3",
     "vue": "^3.5.13"
   }
 }
