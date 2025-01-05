@@ -63,6 +63,27 @@ export interface DragSelectProps {
 }
 ```
 
+## Slots
+
+```ts
+export interface DragSelectSlots {
+  /**
+   * Above but within the selected area
+   */
+  header(): any;
+
+  /**
+   * Allows the slot for every item in the selectable area
+   */
+  item(props: { item: any; index: number; isSelected: boolean }): any;
+
+  /**
+   * Belo but within the selected area
+   */
+  footer(): any;
+}
+```
+
 ## Source
 
 [Source](https://github.com/devloos/devlos-ui/blob/main/package/src/DragSelect/DragSelect.vue) • [Demo](https://github.com/devloos/devlos-ui/blob/main/docs/src/demos/DragSelect.vue)
