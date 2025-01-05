@@ -32,6 +32,23 @@ export interface DragSelectProps {
    */
   enableEscapeReset?: boolean;
 }
+
+export interface DragSelectSlots {
+  /**
+   * Above but within the selected area
+   */
+  header(): any;
+
+  /**
+   * Allows the slot for every item in the selectable area
+   */
+  item(props: { item: any; index: number; isSelected: boolean }): any;
+
+  /**
+   * Below but within the selected area
+   */
+  footer(): any;
+}
 </script>
 
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
@@ -72,6 +89,8 @@ class DOMVector {
 defineOptions({
   inheritAttrs: false,
 });
+
+defineSlots<DragSelectSlots>();
 
 const props = withDefaults(defineProps<DragSelectProps>(), {
   backgroundColor: TEAL_HEX,
