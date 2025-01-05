@@ -78,7 +78,7 @@ export interface DragSelectSlots {
   item(props: { item: any; index: number; isSelected: boolean }): any;
 
   /**
-   * Belo but within the selected area
+   * Below but within the selected area
    */
   footer(): any;
 }
