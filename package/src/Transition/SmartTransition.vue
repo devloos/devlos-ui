@@ -1,20 +1,17 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
 
-const props = defineProps({
-  name: {
-    type: String,
-    default: 'fade',
+const props = withDefaults(
+  defineProps<{
+    name: string;
+    mode: 'default' | 'out-in' | 'in-out';
+    duration: string | number;
+  }>(),
+  {
+    name: 'fade',
+    duration: 300,
   },
-  mode: {
-    type: String,
-    default: '',
-  },
-  duration: {
-    type: [String, Number],
-    default: 300,
-  },
-});
+);
 
 const durationMS = computed(() => `${props.duration}ms`);
 </script>
