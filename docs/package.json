@@ -8,15 +8,15 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.27.0",
-    "postcss": "^8.5.3",
+    "eslint": "^9.28.0",
+    "postcss": "^8.5.4",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.17",
     "vitepress": "^1.6.3"
   },
   "dependencies": {
-    "@vueuse/core": "^13.2.0",
+    "@vueuse/core": "^13.3.0",
     "devlos-ui": "^0.1.4",
-    "vue": "^3.5.14"
+    "vue": "^3.5.16"
   }
 }
