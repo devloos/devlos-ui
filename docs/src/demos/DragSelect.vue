@@ -31,7 +31,7 @@ const selectedItems = ref([]);
 <template>
   <div>
     <div
-      class="flex justify-between w-100 border border-black dark:border-white p-2 translate-y-[1px]"
+      class="flex justify-between w-full border border-black dark:border-white p-2 translate-y-[1px]"
     >
       <div>Selectable Area</div>
       <div class="flex gap-2">
