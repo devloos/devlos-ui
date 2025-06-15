@@ -1,7 +1,11 @@
 import { defineConfig } from "vitepress";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+  },
   title: "Devlos UI",
   description: "Documentation for devlos-ui",
   cleanUrls: true,
