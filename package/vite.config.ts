@@ -4,12 +4,13 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import pkg from './package.json';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import tailwindcss from '@tailwindcss/vite';
 
 const PROJECT_ROOT_DIR = resolve(__dirname);
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), cssInjectedByJsPlugin()],
+  plugins: [vue(), cssInjectedByJsPlugin(), tailwindcss()],
   resolve: {
     alias: {
       '@': resolve(PROJECT_ROOT_DIR, 'src'),
