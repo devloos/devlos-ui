@@ -8,8 +8,8 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.28.0",
-    "postcss": "^8.5.4",
+    "eslint": "^9.29.0",
+    "postcss": "^8.5.5",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.17",
     "vitepress": "^1.6.3"
