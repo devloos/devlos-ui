@@ -40,40 +40,32 @@ Start by creating a new Vue project using `vite`:
 npm create vite@latest
 ```
 
-### Add Tailwind and its configuration
+## 🛠️ Installing Tailwind CSS v4 with Vite
 
-Install `tailwindcss` and its peer dependencies, then generate your `tailwind.config.js` and `postcss.config.js` files:
+1. **Install the packages**
 
-```bash
-npm install -D tailwindcss postcss autoprefixer
-```
+   ```bash
+   npm install tailwindcss @tailwindcss/vite
+   ```
 
-```bash
-npx tailwindcss init -p
-```
+2. **Update your `vite.config.ts`**
 
-Add this import header in your main css file, `src/index.css` in our case:
+   ```ts
+   import { defineConfig } from 'vite';
+   import tailwindcss from '@tailwindcss/vite';
 
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+   export default defineConfig({
+     plugins: [tailwindcss()],
+   });
+   ```
 
-/* ... */
-```
+3. **Import Tailwind into your CSS**
 
-Configure the tailwind template paths in `tailwind.config.js`:
+   In your main CSS file (e.g., `src/index.css`):
 
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
+   ```css
+   @import 'tailwindcss';
+   ```
 
 ### Install devlos-ui
 

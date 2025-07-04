@@ -1,6 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script lang="ts">
-const TEAL_HEX = '#008080';
+const CYAN_HEX = '#007595';
 
 export interface DragSelectProps {
   /**
@@ -10,7 +10,7 @@ export interface DragSelectProps {
 
   /**
    * Background color of a selected element
-   * @default "#008080" teal color
+   * @default "#007595" teal color
    */
   backgroundColor?: string;
 
@@ -93,8 +93,8 @@ defineOptions({
 defineSlots<DragSelectSlots>();
 
 const props = withDefaults(defineProps<DragSelectProps>(), {
-  backgroundColor: TEAL_HEX,
-  selectorColor: `${TEAL_HEX}50`,
+  backgroundColor: CYAN_HEX,
+  selectorColor: `${CYAN_HEX}50`,
   disableSelectedStyles: false,
   enableEscapeReset: false,
 });
