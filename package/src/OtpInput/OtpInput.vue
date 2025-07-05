@@ -55,6 +55,7 @@ export interface OtpInputEmits {
 </script>
 
 <script setup lang="ts">
+import { twMerge } from 'tailwind-merge';
 import { onMounted, ref, useTemplateRef, watch } from 'vue';
 
 const emit = defineEmits<OtpInputEmits>();
@@ -139,12 +140,7 @@ const handlePaste = (e: ClipboardEvent) => {
       type="text"
       maxlength="1"
       inputmode="numeric"
-      :class="[
-        inputClass,
-        {
-          [invalidClass]: invalid,
-        },
-      ]"
+      :class="twMerge(inputClass, invalid ? invalidClass : '')"
       :disabled="disabled"
       :readonly="readonly"
       :aria-label="`Digit ${index + 1}`"

@@ -107,3 +107,7 @@ interface OtpInputEmits {
 ## Source
 
 [Source](https://github.com/devloos/devlos-ui/blob/main/package/src/OtpInput/OtpInput.vue) • [Demo](https://github.com/devloos/devlos-ui/blob/main/docs/src/demos/OtpInput.vue)
+
+## Credits
+
+- [Connor Darling](https://github.com/connor-darling)

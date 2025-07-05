@@ -2,7 +2,6 @@ import { resolve } from 'path';
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import pkg from './package.json';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -21,7 +20,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: [...Object.keys(pkg.dependencies ?? {}), /^playground\//],
+      external: ['vue'],
       output: {
         exports: 'named',
         globals: {

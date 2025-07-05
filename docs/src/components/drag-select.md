@@ -30,6 +30,8 @@ Drag within the container to select your items.
 <DragSelectDemo />
 :::
 
+## Customization
+
 ## Props
 
 ```ts
@@ -38,18 +40,6 @@ export interface DragSelectProps {
    * Items to be used by Drag Select
    */
   items: any[];
-
-  /**
-   * Background color of a selected element
-   * @default "#008080" teal color
-   */
-  backgroundColor?: string;
-
-  /**
-   * Selector color background and border
-   * @default "#00808050" teal color reduced 50%
-   */
-  selectorColor?: string;
 
   /**
    * Disable selected item styles
