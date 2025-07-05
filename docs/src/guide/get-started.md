@@ -1,6 +1,6 @@
 # Getting Started
 
-Devlos UI is a collection of components based on [Tailwind CSS](https://tailwindcss.com). Although we compile everything down with dui prefix so that it can be css framework agnostic.
+Devlos UI is a collection of components based on [Tailwind CSS](https://tailwindcss.com). However, we compile everything with a dui prefix so that it can be CSS framework-agnostic.
 
 ## Install devlos-ui
 

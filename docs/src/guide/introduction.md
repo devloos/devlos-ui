@@ -38,8 +38,6 @@ Welcome to **Devlos UI**, the ultimate solution for developers seeking clean, cu
 - **Maintainable codebase**: Fully typed and documented components ensure clarity and maintainability.
 - **Future-proof your projects**: Designed with scalability and flexibility in mind.
 
----
-
 ## Get Involved
 
 Devlos UI is open-source and thrives on contributions from developers like you. Found a bug or have a feature request? [Join us on GitHub](https://github.com/devloos/devlos-ui) and help make Devlos UI even better!

@@ -6,7 +6,7 @@ Welcome to **Devlos UI**, the ultimate solution for developers seeking clean, cu
 
 ## Why Choose Devlos UI?
 
-### 🫣 Feature Rich
+### 💰 Feature Rich
 
 - **A curated selection**: Start with a powerful component that delivers value out of the box. More to come!
 
@@ -38,52 +38,7 @@ Welcome to **Devlos UI**, the ultimate solution for developers seeking clean, cu
 
 # Getting Started
 
-Devlos UI is a collection of components based on [Tailwind CSS](https://tailwindcss.com). We assume you are already familiar with the basic ideas of [Tailwind CSS](https://tailwindcss.com) before you continue.
-
-## Create project
-
-Start by creating a new Vue project using `vite`:
-
-```bash
-npm create vite@latest
-```
-
-## Add Tailwindcss
-
-Install `tailwindcss` and its peer dependencies, then generate your `tailwind.config.js` and `postcss.config.js` files:
-
-```bash
-npm install -D tailwindcss postcss autoprefixer
-```
-
-```bash
-npx tailwindcss init -p
-```
-
-## Configure Tailwindcss
-
-Add this import header in your main css file, `src/index.css` in our case:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* ... */
-```
-
-Configure the tailwind template paths in `tailwind.config.js`:
-
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
+Devlos UI is a collection of components based on [Tailwind CSS](https://tailwindcss.com). However, we compile everything with a dui prefix so that it can be CSS framework-agnostic.
 
 ## Install devlos-ui
 
@@ -95,28 +50,6 @@ npm i devlos-ui@latest
 
 You can now start adding components to your project.
 
-# Usage
-
-### Setup
-
-Use the `import` statement to import any components needed.
-
-```js
-import { DragSelect } from "devlos-ui";
-```
-
-Simply use it as a component in any vue application.
-
-```html
-<DragSelect v-model="selectedItems" :items="items" class="...">
-  <template #item="{ item }">
-    <div class="...">
-      <div>ID: {{ item.id }}</div>
-    </div>
-  </template>
-</DragSelect>
-```
-
-## Get Involved
+# Get Involved
 
 Devlos UI is open-source and thrives on contributions from developers like you. Found a bug or have a feature request? [Join us on GitHub](https://github.com/devloos/devlos-ui) and help make Devlos UI even better!
