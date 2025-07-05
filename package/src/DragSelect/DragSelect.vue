@@ -1,24 +1,10 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script lang="ts">
-const CYAN_HEX = '#007595';
-
 export interface DragSelectProps {
   /**
    * Items to be used by Drag Select
    */
   items: any[];
-
-  /**
-   * Background color of a selected element
-   * @default "#007595" teal color
-   */
-  backgroundColor?: string;
-
-  /**
-   * Selector color background and border
-   * @default "#00808050" teal color reduced 50%
-   */
-  selectorColor?: string;
 
   /**
    * Disable selected item styles
@@ -93,8 +79,6 @@ class DOMVector {
 }
 
 const props = withDefaults(defineProps<DragSelectProps>(), {
-  backgroundColor: CYAN_HEX,
-  selectorColor: `${CYAN_HEX}50`,
   disableSelectedStyles: false,
   enableEscapeReset: false,
 });
@@ -281,12 +265,12 @@ const selectorStyle = computed(() => {
 
 <style scoped>
 .item::after {
-  background-color: v-bind(backgroundColor);
+  background-color: var(--dui-drag-select-item-bg-color);
   opacity: 25%;
 }
 
 .selector {
-  background-color: v-bind(selectorColor);
-  border-color: v-bind(selectorColor);
+  background-color: var(--dui-drag-selector-color);
+  border-color: var(--dui-drag-selector-color);
 }
 </style>

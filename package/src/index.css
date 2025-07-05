@@ -1,1 +1,6 @@
 @import 'tailwindcss' prefix(dui);
+
+:root {
+  --dui-drag-select-item-bg-color: oklch(54.3% 0.0927 195deg);
+  --dui-drag-selector-color: oklch(54.3% 0.0927 195deg / 31.4%);
+}

@@ -24,7 +24,9 @@ Enter one digit per input field. Paste support is included.
 import OtpInputDemo from "../demos/OtpInputDemo.vue";
 </script>
 
+::: raw
 <OtpInputDemo />
+:::
 
 ## Props
 

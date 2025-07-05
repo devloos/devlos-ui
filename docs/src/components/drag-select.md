@@ -26,7 +26,9 @@ Drag within the container to select your items.
   import DragSelectDemo from '../demos/DragSelectDemo.vue'
 </script>
 
+::: raw
 <DragSelectDemo />
+:::
 
 ## Props
 
