@@ -3,7 +3,8 @@
 :root {
   --color-primary: oklch(54.3% 0.0927 195deg);
   --color-error: oklch(50.943% 0.20864 28.604 / 0.782);
-  --dui-drag-selector-color: gray !important;
+
+  --dui-drag-selector-color: gray;
 }
 
 @theme {
