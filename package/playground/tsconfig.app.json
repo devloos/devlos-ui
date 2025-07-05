@@ -1,0 +1,14 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "strict": false,
+    "noImplicitAny": false,
+    "paths": {
+      "@/*": ["../src/*"]
+    }
+  },
+  "include": ["env.d.ts", "src/**/*", "../src/**/*"],
+  "exclude": ["node_modules"]
+}

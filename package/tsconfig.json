@@ -13,7 +13,11 @@
     "esModuleInterop": true, // Ensure ES module compatibility
     "skipLibCheck": true, // Skip library type checks
     "forceConsistentCasingInFileNames": true, // Enforce consistent casing in imports
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src/**/*"], // Include all files in the `src` folder
   "exclude": ["node_modules", "dist"] // Exclude unnecessary folders

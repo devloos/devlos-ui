@@ -70,7 +70,10 @@ export default defineConfig({
       },
       {
         text: "Components",
-        items: [{ text: "Drag Select", link: "/components/drag-select" }],
+        items: [
+          { text: "Drag Select", link: "/components/drag-select" },
+          { text: "OTP Input", link: "/components/otp-input" },
+        ],
       },
     ],
 

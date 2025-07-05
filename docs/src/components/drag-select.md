@@ -23,10 +23,10 @@ import { DragSelect } from "devlos-ui";
 Drag within the container to select your items.
 
 <script setup>
-  import DragSelect from '../demos/DragSelect.vue'
+  import DragSelectDemo from '../demos/DragSelectDemo.vue'
 </script>
 
-<DragSelect />
+<DragSelectDemo />
 
 ## Props
 

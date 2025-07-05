@@ -1,46 +1,46 @@
 <script lang="ts">
 export interface OtpInputProps {
   /**
-   * Number of inputs
+   * Number of OTP inputs
    * @default 6
    */
   otpLength?: number;
 
   /**
-   * Wrapper for all inputs class
+   * Wrapper class for the container
    */
   wrapperClass?: string;
 
   /**
-   * Class for each input
+   * Class applied to each input
    */
   inputClass?: string;
 
   /**
-   * Whether it should auto focus
+   * Whether to auto-focus the first input on mount
    * @default true
    */
   autoFocus?: boolean;
 
   /**
-   * Whether otp input is invalid
+   * Whether input is marked invalid (adds aria-invalid and styling)
    * @default false
    */
   invalid?: boolean;
 
   /**
-   * Class for each invalid input
+   * Class applied when input is marked invalid
    */
   invalidClass?: string;
 
   /**
-   * Whether each input should be disabled
+   * Whether to disable inputs
    * @default false
    */
   disabled?: boolean;
 
   /**
-   * Whether each input should be readonly
+   * Whether inputs should be read-only
    * @default false
    */
   readonly?: boolean;
@@ -61,11 +61,11 @@ const emit = defineEmits<OtpInputEmits>();
 
 const {
   otpLength = 6,
-  wrapperClass = 'flex justify-center gap-2',
-  inputClass = 'border border-cyan-700 rounded focus:outline-cyan-700 focus:outline-offset-4 size-10 text-center',
+  wrapperClass = '',
+  inputClass = '',
   autoFocus = true,
   invalid = false,
-  invalidClass = 'border-red-700 focus:outline-red-700',
+  invalidClass = '',
   disabled = false,
   readonly = false,
 } = defineProps<OtpInputProps>();
@@ -139,7 +139,12 @@ const handlePaste = (e: ClipboardEvent) => {
       type="text"
       maxlength="1"
       inputmode="numeric"
-      :class="[inputClass, invalid ? invalidClass : '']"
+      :class="[
+        inputClass,
+        {
+          [invalidClass]: invalid,
+        },
+      ]"
       :disabled="disabled"
       :readonly="readonly"
       :aria-label="`Digit ${index + 1}`"

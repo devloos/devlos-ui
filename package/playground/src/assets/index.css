@@ -1,0 +1,4 @@
+@import 'tailwindcss' prefix(dui);
+@source "../../../src/**/*.{vue,js,ts,jsx,tsx}";
+
+@custom-variant dark (&:is(.dark *));

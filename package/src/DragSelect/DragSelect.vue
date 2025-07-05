@@ -55,6 +55,12 @@ export interface DragSelectSlots {
 <script setup lang="ts">
 import { computed, ref, useTemplateRef, watch } from 'vue';
 
+defineOptions({
+  inheritAttrs: false,
+});
+
+defineSlots<DragSelectSlots>();
+
 class DOMVector {
   constructor(
     readonly x: number,
@@ -85,12 +91,6 @@ class DOMVector {
     return Math.sqrt(Math.pow(this.magnitudeX, 2) + Math.pow(this.magnitudeY, 2));
   }
 }
-
-defineOptions({
-  inheritAttrs: false,
-});
-
-defineSlots<DragSelectSlots>();
 
 const props = withDefaults(defineProps<DragSelectProps>(), {
   backgroundColor: CYAN_HEX,
@@ -225,7 +225,7 @@ const selectorStyle = computed(() => {
 
 <template>
   <div
-    class="relative select-none"
+    class="dui:relative dui:select-none"
     @pointerdown="initSelectorVector"
     @pointermove="setSelectorVector"
     @pointerup="selectorVector = null"
@@ -257,7 +257,7 @@ const selectorStyle = computed(() => {
         :id="String(index)"
         class="item"
         :class="{
-          'relative after:absolute after:inset-0 after:content-[\'\']':
+          'dui:relative dui:after:absolute dui:after:inset-0 dui:after:content-[\'\']':
             selectedItems.includes(item) && !disableSelectedStyles,
         }"
         @pointerdown="addSelectedItem(index)"
@@ -270,7 +270,7 @@ const selectorStyle = computed(() => {
       <div
         ref="ref-selection"
         v-if="isDragging"
-        class="selector absolute border-2"
+        class="selector dui:absolute dui:border-2"
         :style="selectorStyle"
       />
     </div>

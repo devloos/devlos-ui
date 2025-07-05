@@ -6,14 +6,12 @@ import pkg from './package.json';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import tailwindcss from '@tailwindcss/vite';
 
-const PROJECT_ROOT_DIR = resolve(__dirname);
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), cssInjectedByJsPlugin(), tailwindcss()],
   resolve: {
     alias: {
-      '@': resolve(PROJECT_ROOT_DIR, 'src'),
+      '@': resolve(__dirname, 'src'),
     },
   },
   build: {
@@ -23,7 +21,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: [...Object.keys(pkg.dependencies ?? {})],
+      external: [...Object.keys(pkg.dependencies ?? {}), /^playground\//],
       output: {
         exports: 'named',
         globals: {
