@@ -17,8 +17,8 @@ hero:
 
 features:
   - title: Feature Rich
-    details: One component for you to choose from
-    icon: 🫣
+    details: Two component for you to choose from
+    icon: 💰
   - title: Seamless integration
     details: Move fast with no headaches
     icon: 🚀

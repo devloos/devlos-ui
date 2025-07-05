@@ -8,7 +8,7 @@ Welcome to **Devlos UI**, the ultimate solution for developers seeking clean, cu
 
 ## Why Choose Devlos UI?
 
-### 🫣 Feature Rich
+### 💰 Feature Rich
 
 - **A curated selection**: Start with a powerful component that delivers value out of the box. More to come!
 

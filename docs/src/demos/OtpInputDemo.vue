@@ -14,7 +14,14 @@ const isInvalid = ref(false);
       :invalid="isInvalid"
     />
 
-    <input id="invalid-check" v-model="isInvalid" type="checkbox" />
-    <label for="invalid-check">Check for invalid</label>
+    <div class="flex gap-2 items-center pt-5">
+      <input
+        id="invalid-check"
+        v-model="isInvalid"
+        class="size-5"
+        type="checkbox"
+      />
+      <label for="invalid-check">Check for invalid</label>
+    </div>
   </div>
 </template>
