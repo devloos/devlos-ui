@@ -2,3 +2,10 @@
 @source "../../../src/**/*.{vue,js,ts,jsx,tsx}";
 
 @custom-variant dark (&:is(.dark *));
+
+@layer dui-base {
+  :root {
+    --dui-drag-select-item-bg-color: oklch(54.3% 0.0927 195deg);
+    --dui-drag-selector-color: oklch(54.3% 0.0927 195deg / 31.4%);
+  }
+}
