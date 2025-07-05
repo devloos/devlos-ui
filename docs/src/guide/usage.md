@@ -25,7 +25,7 @@ Simply use it as a component in any vue application.
 Drag within the container to select your items.
 
 <script setup>
-  import DragSelect from '../demos/DragSelect.vue'
+  import DragSelectDemo from '../demos/DragSelectDemo.vue'
 </script>
 
-<DragSelect />
+<DragSelectDemo />
